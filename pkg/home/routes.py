@@ -31,7 +31,7 @@ def login():
                 flash('Account has been suspended by Admin. Please contact Admin.', 'error')
         return redirect(url_for('home.login'))
 
-    return render_template('/users/login.html')
+    return render_template('/home/login.html')
 
 
 @home.route("/register/", methods=["GET", "POST"])
@@ -68,9 +68,9 @@ def register_user():
         new_user = User( first_name=fname, last_name=lname, email=email, phone=phone, state_id=state, lga_id=lga,  address=address,  hashed_password=hashed_password, )
         db.session.add(new_user)
         db.session.commit()
-        return redirect(url_for('home.login'))
+        return redirect(url_for('home.login')) 
 
-    return render_template("users/register.html", states=states)
+    return render_template("home/register.html", states=states)
 
 
 @home.post("/logout/")
@@ -224,7 +224,9 @@ def search_word():
 
 
 
-
+@home.errorhandler(404)
+def page_not_found(error):
+    return render_template("home/404.html") 
 
 
 

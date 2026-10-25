@@ -4,19 +4,13 @@
 MoveIt User Dashboard
 {%endblock%}
 
-{% block actiontodo %}
-<form method="post" action="{{url_for('home.logout')}}" class="signup bg-orange-400 text-white border font-bold border-white hover:bg-white hover:text-orange-500 px-3 py-2 ">
-    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-    <button> Sign out </button>
-</form>
-{% endblock %}
+
 
 {% block maincontent%}
 
 
 
-{% macro my_button(action, label, style, msg='') %}
-
+{% macro my_button(action, label, style, msg='') %} 
 
 <form action="{{ action }}" method="post" {% if msg %}onsubmit="return confirm('{{ msg }}')"{% endif %}>
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
@@ -32,7 +26,7 @@ MoveIt User Dashboard
         <div class="absolute -top-20 -right-20 h-64 w-64 rounded-full bg-orange-500/20 blur-3xl"></div>
         <div class="relative mx-auto max-w-6xl px-4 py-12">
             <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl">Welcome to your Dashboard {{user.first_name}} - {{user.last_name}} </h1>
-
+            <p > {{session.get('activeuser')}} </p>
             <p class="mt-3 max-w-xl text-lg text-sky-100">Post items for sale, manage your listings and review what you have bought.</p>
         </div>
     </section>

@@ -21,7 +21,7 @@ def admin_home():
     relocations = Relocation.query.order_by(Relocation.created_at.desc()).all()
     all_messages = Contact.query.order_by(Contact.created_at.desc()).all()
 
-    return render_template( "/users/admin.html", states=all_states, lgas=all_lgas, users=all_users, products=all_products, drivers=all_drivers, relocations=relocations, senders=all_messages)
+    return render_template( "/admin/admin.html", states=all_states, lgas=all_lgas, users=all_users, products=all_products, drivers=all_drivers, relocations=relocations, senders=all_messages)
 
 
 @admin.route("/relocations/<int:relocation_id>/manage/", methods=["GET", "POST"])

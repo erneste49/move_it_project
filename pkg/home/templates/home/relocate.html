@@ -15,7 +15,7 @@ Relocation page
 {% block maincontent%}
 <div class="relocate-container bg-slate-50">
 
-    <!-- hero (the .rlp class is kept so any background image in relocate.css still shows) -->
+    <!-- hero (the .rlp class is used for background image in relocate.css to use bg ) -->
     <section class="rlp relative overflow-hidden mt-[30px] bg-sky-900">
         <div class="absolute inset-0 bg-gradient-to-br from-sky-950/90 via-sky-900/80 to-sky-800/70"></div>
         <div class="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-orange-500/20 blur-3xl"></div>
@@ -32,7 +32,7 @@ Relocation page
         </div>
     </section>
 
-    <!-- booking form + how it works -->
+    <!-- booking form and how it works -->
     <section id="book" class="relative z-10 mx-auto -mt-20 grid max-w-6xl gap-8 px-4 pb-20 lg:grid-cols-5">
 
         <form action="{{ url_for('home.relocate') }}" method="post" class="space-y-5 rounded-2xl border border-slate-200 bg-white p-6 shadow-xl sm:p-8 lg:col-span-3">

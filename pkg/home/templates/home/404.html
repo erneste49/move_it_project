@@ -1,0 +1,21 @@
+
+{% extends "partials/master.html" %}
+
+{% block title %}
+MoveIt ErrorPage
+{%endblock%}
+
+{% block maincontent%}
+<div class="mt-[80px] relative">
+    <h1 class="text-white absolute text-center font-bold md:text-5xl md:mt-[150px] mt-[100px] text-2xl md:ml-[70px]"> Sorry.... The page you are looking for is not available.. </h1>
+     
+    <img src="{{url_for('static', filename='images/error.jpg')}}" class="h-screen w-full" alt="page not found error" class="img-error " loading="lazy">
+    
+   
+</div> 
+{% endblock%}
+
+{% block footerAction %} {{url_for('home.home_page')}} {%endblock%}
+
+{%block name%} Go To Homepage {% endblock %} 
+

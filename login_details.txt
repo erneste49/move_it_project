@@ -1,0 +1,20 @@
+
+The login detail for admin page is 
+email: ernesteze@moatcohorts.com.ng
+password: admin123
+
+To register a new admin use route: (http://127.0.0.1:8000/admin/ctrl/register/new/admin/) The link can only be accessed by those shared with. 
+
+
+To login as a user
+http://127.0.0.1:8000/user/
+
+Login as user using any of the email and same password, 
+email: mj@yahoo.com, johnsmith@gmail.com, roi@gmail.com
+password: pass123 
+
+
+
+
+
+
